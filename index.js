@@ -23,7 +23,7 @@ function extractNoticeNumber(url) {
 async function fetchAndCheckNotices() {
     try {
         const response = await axios.get(
-            "https://exp.sunnythedeveloper.in/scrapper.php"
+            "https://mmmut.ac.in/ExaminationSchedule"
         );
         const json = await response.data;
 
@@ -223,8 +223,8 @@ app.get("/api/notify", async (req, res) => {
     }
 });
 
-const CHECK_INTERVAL = 10 * 1000;
-console.log("Setting up periodic notice checking every 10 seconds...");
+const CHECK_INTERVAL = 60 * 60 * 1000;
+console.log("Setting up periodic notice checking every 1 hour...");
 setInterval(async () => {
     console.log("Running scheduled notice check...");
     await fetchAndCheckNotices();
