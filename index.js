@@ -79,6 +79,7 @@ async function fetchAndCheckNotices() {
                 }
             }
         }
+        notices.pop();
 
         const newNotices = [];
         for (const notice of notices) {
