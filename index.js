@@ -23,7 +23,7 @@ function extractNoticeNumber(url) {
 async function fetchAndCheckNotices() {
     try {
         const response = await axios.get(
-            "https://exp.sunnythedeveloper.com/scrapper.php"
+            "https://exp.sunnythedeveloper.in/scrapper.php"
         );
         const json = await response.data;
 
